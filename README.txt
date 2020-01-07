@@ -12,4 +12,6 @@ This program is intended to estimate reaction parameters for ODE-based networks.
 - Proteomics (model input) data: arranged using Entrez gene symbols as rows, samples as columns, data as log2RFU (for example, see PMID 31511425 SOMAscan proteomics data, Supplementary Table S2)
 - Transcriptomics (model output) data: arranged using gene symbols as rows, samples as columns, data as CPM (for example, see PMID RNA-seq data, GSE133529)
 - Netflux model: prepared according to Netflux documentation (for example, see snm_1_1_rev3.xlsx)
-- PARAMS.txt file: editable file containing all needed parameters for running program
+- PARAMS.txt file: editable file containing all needed parameters for running program  
+
+*Changed 01.07.2020 JR
