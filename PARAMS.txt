@@ -1,0 +1,18 @@
+% Software parameters: SNM Model Fitting
+% 1.6.2020 JR
+
+% Data parameters: input data, output data, Netflux model
+input = "aav3233_Data_file_S1.xlsx";
+output = "GSE133529_ProcessedDataFile.csv";
+model = "snm_1_1_rev3.xlsx";
+
+params_data = [input;output;model];
+
+% Utility parameters: fitness method, fitness function, no. of generations, population size, output function
+method = "MSE";
+fitnessfcn = @(w) snm_1_1_rev3_reduced_fitness_Anseth(w,exptin,exptout,method);
+maxgens = 200;	% modify for desired run time
+popsize = 200;	% modify for desired run time
+outputfcn = @snm_1_1_rev3_gaout;
+
+params_util = [method;fitnessfcn;maxgens;popsize;outputfcn];
